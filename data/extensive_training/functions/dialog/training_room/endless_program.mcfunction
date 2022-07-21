@@ -2,7 +2,7 @@ scoreboard players add @s[scores={Dialog=266..}] Dialog 1
 execute if entity @a[scores={Health=..0},tag=same_room] run scoreboard players set @s[scores={Dialog=265}] Dialog 266
 scoreboard players add @s[scores={Dialog=..264}] Dialog 1
 execute unless entity @s[scores={Dialog=1..}] run scoreboard players add @s Dialog 1
-execute if entity @s[scores={Dialog=1..345}] as @a[tag=same_room] unless entity @s[scores={MusicGroup=0,MusicType=3}] run function luigis_mansion:other/music/set/training
+execute if entity @s[scores={Dialog=1..345}] as @a[tag=same_room] run function luigis_mansion:other/music/set/training
 execute if entity @s[scores={Dialog=1}] if score #players Totals matches 1 run tellraw @a[tag=same_room] {"translate":"chat.type.text","with":[{"translate":"luigis_mansion:entity.e_gadd","color":"green"},{"translate":"extensive_training:dialog.endless.1","with":[{"selector":"@p[gamemode=!spectator]"}]}]}
 execute if entity @s[scores={Dialog=1}] if score #players Totals matches 2.. run tellraw @a[tag=same_room] {"translate":"chat.type.text","with":[{"translate":"luigis_mansion:entity.e_gadd","color":"green"},{"translate":"extensive_training:dialog.endless.1.more"}]}
 execute if entity @s[scores={Dialog=1}] as @a[tag=same_room] at @s run playsound luigis_mansion:entity.e_gadd.talk.ohyahmah_luigi_ck_ck neutral @s ~ ~ ~ 1
@@ -34,7 +34,7 @@ execute if entity @s[scores={Dialog=266}] as @a[tag=same_room] at @s run playsou
 execute if entity @s[scores={Dialog=298}] if score #players Totals matches 1 run tellraw @a[tag=same_room] {"translate":"chat.type.text","with":[{"translate":"luigis_mansion:entity.e_gadd","color":"green"},{"translate":"extensive_training:dialog.endless.5"}]}
 execute if entity @s[scores={Dialog=298}] if score #players Totals matches 2.. run tellraw @a[tag=same_room] {"translate":"chat.type.text","with":[{"translate":"luigis_mansion:entity.e_gadd","color":"green"},{"translate":"extensive_training:dialog.endless.5.more"}]}
 execute if entity @s[scores={Dialog=298}] as @a[tag=same_room] at @s run playsound luigis_mansion:entity.e_gadd.talk.oui_oomahkah neutral @s ~ ~ ~ 1
-execute if entity @s[scores={Dialog=346..}] as @a[tag=same_room] unless entity @s[scores={MusicGroup=0,MusicType=24}] run function luigis_mansion:other/music/set/training_results
+execute if entity @s[scores={Dialog=346..}] as @a[tag=same_room] run function luigis_mansion:other/music/set/training_results
 execute if entity @s[scores={Dialog=346}] if score #training_room GhostCaught matches 50.. run function extensive_training:room/gallery/clear_task/task_2
 execute if entity @s[scores={Dialog=346}] if score #training_room GhostCaught matches 100.. run function extensive_training:room/gallery/clear_task/task_3
 execute if entity @s[scores={Dialog=346}] if score #training_room GhostCaught matches 250.. run function extensive_training:room/gallery/clear_task/task_4
